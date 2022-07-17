@@ -1,7 +1,8 @@
 import React from 'react'
 
 const Data = (props) => {
-    const{_id,name,email,password,photo}=props.data
+    const{_id,name,email,password,photo}=props.data;
+    
   return (
     <div>
       

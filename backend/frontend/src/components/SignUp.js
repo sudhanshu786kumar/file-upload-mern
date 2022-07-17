@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 import axios from 'axios';
+import { axiosInstance } from '../Config';
 
 
 
@@ -34,7 +35,7 @@ const handlePost = async () => {
   formData.append('email',input.email);
   formData.append('password',input.password)
 
-  await axios.post('http://localhost:5000/user/signup', formData).then(res => res.data)
+  await axiosInstance.post('/user/signup', formData).then(res => res.data)
 }
 const handleChange = (e) => {
   setInput((pval) => (
